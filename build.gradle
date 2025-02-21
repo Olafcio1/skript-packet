@@ -26,7 +26,7 @@ repositories {
 
 base {
     archivesName = "Skript-Packet"
-    setVersion("3.0.0")
+    setVersion("3.0.1")
     setGroup("fr.anarchick.skriptpacket")
 }
 

@@ -306,7 +306,8 @@ public class ConverterLogic {
     }
 
     private static final Map<NamespacedKey, Integer> BIOME_ID_MAP = new HashMap<>();
-    private static final Version PAPER_1_21 = new Version(1, 21);
+    private static final Version PAPER_1_21 = new Version(1, 21); // We have to use RegistryAccess
+    private static final Version PAPER_1_21_3 = new Version(1, 21, 3); // Biome is now an interface
 
     public static void loadBiomeID() {
         Logging.info("Loading biome ids from config");
@@ -330,7 +331,9 @@ public class ConverterLogic {
 
         if (config.getBoolean("missing-biome-check", true)) {
 
-            if (Skript.getMinecraftVersion().isSmallerThan(PAPER_1_21)) {
+            Version serverVersion = Skript.getMinecraftVersion();
+
+            if (serverVersion.isSmallerThan(PAPER_1_21) || serverVersion.isSmallerThan(PAPER_1_21_3)) {
                 Logging.info("Missing biome checker is not supported in this paper version.");
                 return;
             }
