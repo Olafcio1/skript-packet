@@ -5,8 +5,6 @@ import ch.njol.skript.Skript;
 import ch.njol.skript.SkriptAddon;
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.util.Version;
-import com.jeff_media.updatechecker.UpdateCheckSource;
-import com.jeff_media.updatechecker.UpdateChecker;
 import fr.anarchick.skriptpacket.elements.Types;
 import fr.anarchick.skriptpacket.packets.PacketManager;
 import fr.anarchick.skriptpacket.packets.SkriptPacketEventListener;
@@ -53,13 +51,13 @@ public class SkriptPacket extends JavaPlugin {
         if (SKRIPT_VERSION.isSmallerThan(MINIMUM_SKRIPT_VERSION)) {
             Logging.info("Your version of Skript is " + SKRIPT_VERSION);
             Logging.info("Skript-Packet requires that you run at least version " + MINIMUM_SKRIPT_VERSION + " of Skript");
-            // Does not disable the plugin, cause some syntaxes can still works
+            // Does not disable the plugin, cause some syntaxes can still work
         }
 
         if (PROTOCOLLIB_VERSION.isSmallerThan(MINIMUM_PROTOCOLLIB_VERSION)) {
             Logging.info("Your version of ProtocolLib is " + PROTOCOLLIB_VERSION);
             Logging.info("Skript-Packet requires that you run at least version " + MINIMUM_PROTOCOLLIB_VERSION + " of ProtocolLib");
-            // Does not disable the plugin, cause some syntaxes can still works
+            // Does not disable the plugin, cause some syntaxes can still work
         }
 
         try {
@@ -91,7 +89,7 @@ public class SkriptPacket extends JavaPlugin {
         metrics.addCustomChart(new Metrics.SimplePie("skript-reflect_support", () ->
             String.valueOf(isReflectAddon)));
         
-        Logging.info("is enable! Enjoy packets :D");
+        Logging.info("is enabled! Enjoy packets :D");
         checkUpdate();
     }
 
@@ -106,9 +104,7 @@ public class SkriptPacket extends JavaPlugin {
     }
     
     private void checkUpdate() {
-        new UpdateChecker(this, UpdateCheckSource.GITHUB_RELEASE_TAG, "Anarchick/skript-packet")
-                .setDownloadLink("https://github.com/Anarchick/skript-packet/releases")
-                .checkNow();
+        // TODO
     }
     
     @SuppressWarnings({"unchecked" })
