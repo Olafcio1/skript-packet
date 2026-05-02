@@ -64,16 +64,25 @@ public class PacketManager extends StructureModifier<Object> {
         FIELD_CONVERTERS.put(Component.class, ConverterToBukkit.STRING_TO_PAPER_COMPONENT);
     }
 
+    // UPDATE: I've included the CONFIGURATION packet-section here.
     private static Map<String, PacketType> createNameToPacketTypeMap() {
         final Map<String, PacketType> packetTypesByName = new HashMap<>();
+
         addPacketTypes(packetTypesByName, PacketType.Play.Server.getInstance().iterator(), "PLAY", true);
         addPacketTypes(packetTypesByName, PacketType.Play.Client.getInstance().iterator(), "PLAY", false);
+
         addPacketTypes(packetTypesByName, PacketType.Handshake.Server.getInstance().iterator(), "HANDSHAKE", true);
         addPacketTypes(packetTypesByName, PacketType.Handshake.Client.getInstance().iterator(), "HANDSHAKE", false);
+
         addPacketTypes(packetTypesByName, PacketType.Login.Server.getInstance().iterator(), "LOGIN", true);
         addPacketTypes(packetTypesByName, PacketType.Login.Client.getInstance().iterator(), "LOGIN", false);
+
         addPacketTypes(packetTypesByName, PacketType.Status.Server.getInstance().iterator(), "STATUS", true);
         addPacketTypes(packetTypesByName, PacketType.Status.Client.getInstance().iterator(), "STATUS", false);
+
+        addPacketTypes(packetTypesByName, PacketType.Configuration.Server.getInstance().iterator(), "CONFIGURATION", true);
+        addPacketTypes(packetTypesByName, PacketType.Configuration.Client.getInstance().iterator(), "CONFIGURATION", false);
+
         return packetTypesByName;
     }
 
