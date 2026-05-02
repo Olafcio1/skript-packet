@@ -1,23 +1,21 @@
 [![SkriptHubViewTheDocs](http://skripthub.net/static/addon/ViewTheDocsButton.png)](http://skripthub.net/docs/?addon=skript-packet)
-[![Discord Banner 2](https://discordapp.com/api/guilds/138464183946575874/widget.png?style=banner2)](https://discord.com/channels/138464183946575874/860221632852393996)  
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/R6R3VYU8L)
 
 # Skript-Packet
-A Skript packet addon to replace ThatPacketAddon (which is not updated) with Skript 2.5.2+
+A Skript packet addon to replace the original skript-packet (which is not updated) with Skript 2.5.2+
 
 # CAUTIONS
 
 ⚠️ Skript-Packet **is not** a fork of TPA, syntaxes may change ⚠️  
 ⚠️ This plugin **is not** for beginners ⚠️  
 ⚠️ You may have to use java NMS which is not an API ⚠️  
-⚠️ You **should not** use packet for the first solution if possible, do not try to use this plugin to do ScoreBoard, BossBars, Particles, or existing things ⚠️
+⚠️ You **should not** use packet as the first solution if possible, do not try to use this plugin to do ScoreBoard, BossBars, Particles, or existing things ⚠️
 
 # Requirements
  - Recent version of Skript 2.10.0+
  - Stable [ProtocolLib dev build](https://ci.dmulloy2.net/job/ProtocolLib/) (does not work with v-5.1.0)
- - Java21+
+ - Java 21+
  - It's highly recommended to use skript-reflect
- - I have only tested mc 1.20.1 and 1.21.4 **but** should work in a lot of mc versions
+ - Minecraft >=1.21.10
 
 # What is a packet
 The Minecraft server and your Minecraft client share information called "packets".
