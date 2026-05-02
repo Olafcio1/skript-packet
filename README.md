@@ -1,7 +1,7 @@
 [![SkriptHubViewTheDocs](http://skripthub.net/static/addon/ViewTheDocsButton.png)](http://skripthub.net/docs/?addon=skript-packet)
 
 # Skript-Packet
-A Skript packet addon to replace the original skript-packet (which is not updated) with Skript 2.5.2+
+A Skript packet addon to replace the original skript-packet (which is not updated) with Minecraft 1.21.10
 
 # CAUTIONS
 
