@@ -8,7 +8,7 @@ plugins {
 
 repositories {
     maven { url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots' } // Spigot
-    maven { url 'https://repo.dmulloy2.net/nexus/repository/public/' } // ProtocolLib
+    maven { url 'https://repo.dmulloy2.net/repository/public/' } // ProtocolLib
     maven { url 'https://mvnrepository.com/artifact/org.json/json' } // DataWatcher
 
     maven { url 'https://repo.skriptlang.org/releases' } // Skript
@@ -16,12 +16,10 @@ repositories {
 
     maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
     maven { url 'https://oss.sonatype.org/content/repositories/central' }
-    maven {
-        name = "jeffMediaPublic"
-        url = uri("https://repo.jeff-media.com/public")
-    }
-    mavenCentral()
     maven { url 'https://libraries.minecraft.net' } // must be last to avoid conflicts
+
+    maven { url 'https://repo1.maven.org/maven2/' }
+    maven { url 'https://repo.carm.cc/repository/maven-public/' }
 }
 
 base {
@@ -50,7 +48,6 @@ dependencies {
     compileOnly group: 'com.mojang', name: 'datafixerupper', version: '1.0.20' // ExprPair
     compileOnly group: "com.comphenix.protocol", name: "ProtocolLib", version: protocolLibVersion
     compileOnly group: 'org.json', name: 'json', version: '20231013'
-    implementation("com.jeff_media:SpigotUpdateChecker:3.0.3")
     paperweight.paperDevBundle(mcVersion + mcSubVersion +'-R0.1-SNAPSHOT')
 }
 
@@ -66,9 +63,9 @@ tasks {
     }
 }
 
-tasks.named('shadowJar', com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar) {
-    relocate 'com.jeff_media.updatechecker', 'fr.anarchick.skriptpacket.updatechecker'
-}
+//tasks.named('shadowJar', com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar) {
+//    relocate 'com.jeff_media.updatechecker', 'fr.anarchick.skriptpacket.updatechecker'
+//}
 
 sourceSets {
     main {
