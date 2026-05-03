@@ -191,7 +191,10 @@ public class PacketManager extends StructureModifier<Object> {
         final StructureModifier<Object> modifier = packet.getModifier();
 
         if (!( (i >= 0 ) && (i < modifier.size()) )) {
-            Skript.error("Available indexes for the packketype '"+PacketManager.getPacketName(packet.getType())+"' are from 0 to "+(modifier.size() -1));
+            var name = PacketManager.getPacketName(packet.getType());
+            Skript.error("Available field indexes for the packettype '"+name+"' are from 0 to "+(modifier.size() -1));
+            if (name.equals("PLAY_SERVER_SET_CURSOR_ITEM"))
+                Skript.error("Did you mean to use PLAY_SERVER_WINDOW_ITEMS?");
             return null;
         }
 
