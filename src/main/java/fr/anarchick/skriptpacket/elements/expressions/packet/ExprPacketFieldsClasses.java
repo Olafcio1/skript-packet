@@ -31,7 +31,7 @@ import org.jetbrains.annotations.NotNull;
 })
 @Examples({
     "set {_packet} to new play_server_block_break_animation packet",
-    "broadcast \"%all wrap fields classes of packet {_packet}%\""
+    "broadcast \"%all wrap fields classes of {_packet}%\""
 })
 @Since("1.0, 2.2.0(wrap option)")
 

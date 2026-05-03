@@ -26,8 +26,8 @@ import org.jetbrains.annotations.NotNull;
     "Meta are extra-datas that can be added to a packet"
 })
 @Examples({
-    "set meta \"meta_name\" of packet {_packet} to (1, 2 and 3)",
-    "set {_meta::*} to meta \"meta_name\" of packet {_packet}"
+    "set meta \"meta_name\" of {_packet} to (1, 2 and 3)",
+    "set {_meta::*} to meta \"meta_name\" of {_packet}"
 })
 @Since("1.1")
 

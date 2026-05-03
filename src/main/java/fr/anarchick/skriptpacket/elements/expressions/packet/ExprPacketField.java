@@ -30,8 +30,8 @@ import org.jetbrains.annotations.NotNull;
     "This expression has an auto-converter. More information on the wiki https://github.com/Anarchick/skript-packet/wiki"
 })
 @Examples({
-    "set field 0 of packet {_packet} to 5",
-    "set field 1 of packet {_packet} to id of player"
+    "set field 0 of {_packet} to 5",
+    "set field 1 of {_packet} to id of player"
 })
 @Since("1.0, 1.2 (optional packet), 2.2.0(wrap option)")
 

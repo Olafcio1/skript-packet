@@ -12,7 +12,7 @@ import org.jetbrains.annotations.NotNull;
 
 @Name("Packettype")
 @Description("Return the packet type of a %packet%")
-@Examples("set {_packettype} to packetttype of event-packet")
+@Examples("set {_packettype} to packettype of event-packet")
 @Since("1.1")
 
 public class ExprPacketType extends SimplePropertyExpression<PacketContainer, PacketType>{
